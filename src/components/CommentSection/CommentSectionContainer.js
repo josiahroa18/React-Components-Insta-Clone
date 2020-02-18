@@ -6,15 +6,21 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-  console.log(props.comments);
-  const [comments, setComments] = useState(props.comments);
+  let [comments, setComments] = useState(props.comments);
+  const [newComment, setNewComment] = useState("");
 
-  const submitComment = () => {
-
+  const submitComment = (e) => {
+    e.preventDefault();
+    setComments(
+      comments = [...comments, {
+        username: 'josiah',
+        text: newComment
+      }]
+    );
   }
 
-  const changeComment = () => {
-
+  const changeComment = (e) => {
+    setNewComment(e.target.value);
   }
 
   return (
@@ -23,7 +29,7 @@ const CommentSection = props => {
       {comments.map((comment, index) => {
         return <Comment key={index} comment={comment}/>
       })}
-      <CommentInput/>
+      <CommentInput changeComment={changeComment} submitComment={submitComment} />
     </div>
   );
 };
