@@ -17,6 +17,7 @@ const CommentSection = props => {
         text: newComment
       }]
     );
+    setNewComment("");
   }
 
   const changeComment = (e) => {
@@ -29,7 +30,11 @@ const CommentSection = props => {
       {comments.map((comment, index) => {
         return <Comment key={index} comment={comment}/>
       })}
-      <CommentInput changeComment={changeComment} submitComment={submitComment} />
+      <CommentInput 
+        changeComment={changeComment} 
+        submitComment={submitComment} 
+        newComment={newComment} 
+      />
     </div>
   );
 };
