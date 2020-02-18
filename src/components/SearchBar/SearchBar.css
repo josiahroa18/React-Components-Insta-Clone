@@ -16,6 +16,15 @@
 }
 .image-wrapper {
   height: 50px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-wrapper h2{
+  border-left: 1px solid darkgrey;
+  padding-left: 10px;
 }
 
 .logo-image {
