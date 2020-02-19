@@ -1,7 +1,7 @@
 .comment-text {
   text-align: left;
   padding: 2px;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 .comment {
   font-size: 16px;
@@ -11,16 +11,18 @@
   width: 100%;
 }
 .comment-form input {
+  box-sizing: border-box;
   width: 100%;
   font-size: 14px;
   padding: 10px;
   border: none;
+  outline: none;
   border-top: 1px solid #efefef;
   color: #999;
+  background-color: #fafafa;;
 }
 .user {
   font-size: 14px;
-  margin-left: 5px;
   color: black;
   font-weight: bold;
 }
